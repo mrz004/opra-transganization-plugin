@@ -1,0 +1,11 @@
+{
+  "require": {
+    "htmlburger/carbon-fields-plugin": "^3.6",
+    "fpdf/fpdf": "^1.86"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
