@@ -1,0 +1,42 @@
+# Ignore plugin dependencies
+/vendor/
+
+# Ignore build files
+/build/
+/dist/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore configuration files
+wp-config.php
+/wp-content/
+.htaccess
+
+# Ignore development environment files
+.env
+.env.example
+
+# Ignore package manager files
+composer.lock
+package-lock.json
+yarn.lock
+
+# Ignore backup files
+*.bak
+*.swp
+*.~*
+
+# Ignore cache and compiled files
+/cache/
+*.css.map
+*.js.map
+
+# Ignore database files
+*.sql
+*.sqlite
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
