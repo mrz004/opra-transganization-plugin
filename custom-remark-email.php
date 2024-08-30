@@ -4,7 +4,7 @@
  * @wordpress-plugin
  * Plugin Name: Custom Remark Emails
  * Description: Generate and send a custom email according to the admin requirement for the Quiz and Survey Mastery (QSM) plugin. This plugin is dependent on the QSM plugin and needs QSM to be installed before you can use this plugin.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: mrz
  * Author URI: https://github.com/mrz004
  * Text Domain: custom-remark-email
@@ -68,13 +68,21 @@ if (!class_exists('CustomRemarkEmail')) {
             require_once MRZ_CRE_PLUGIN_PATH . 'includes/functions.php';
 
 
+            // debugging
+            // echo "Debug: " . json_encode($mlw_quiz_array);
+
+
             // *** Getting the user details
-            $name = get_property_value($mlw_quiz_array, 'user_name');
-            $email = get_property_value($mlw_quiz_array, 'user_email');
+            // $name = get_property_value($mlw_quiz_array, 'user_name');
+            // $email = get_property_value($mlw_quiz_array, 'user_email');
+            $quiz_id = get_property_value($mlw_quiz_array, 'quiz_id');
             // $unique_id = get_property_value($mlw_quiz_array, 'result_unique_id');
             // $email = $mlw_quiz_array['user_email'];
             // $phone = get_property_value($mlw_quiz_array, 'user_phone');
             // $business = get_property_value($mlw_quiz_array, 'user_business');
+
+            if ($quiz_id != carbon_get_theme_option('mrz_cre_quiz_id'))
+                return;
 
             // *** Generate the PDF
             // $file_path = '';

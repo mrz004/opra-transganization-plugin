@@ -16,6 +16,7 @@ function crb_attach_theme_options()
         ->set_icon('dashicons-email-alt')
         ->add_fields(
             array(
+                Field::make('text', 'mrz_cre_quiz_id', 'Quiz Id'),
                 Field::make('text', 'mrz_cre_admin_email', 'Admin Email'),
                 Field::make('text', 'mrz_cre_email_subject', 'Email Subject'),
                 Field::make('textarea', 'mrz_cre_email_text', 'Email Text'),

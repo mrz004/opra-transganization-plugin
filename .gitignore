@@ -40,3 +40,4 @@ yarn.lock
 # Ignore miscellaneous files
 .DS_Store
 Thumbs.db
+.mlw_quiz_array.json
